@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/groupFragment"
-        android:name="com.example.goclass.Ui.GroupFragment"
+        android:name="com.example.goclass.ui.GroupFragment"
         android:label="fragment_group"
         tools:layout="@layout/fragment_group" >
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.example.goclass.Ui.SignUpFragment"
+        android:name="com.example.goclass.ui.SignUpFragment"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up" >
         <action
@@ -40,7 +40,7 @@
     </fragment>
     <fragment
         android:id="@+id/userProfileFragment"
-        android:name="com.example.goclass.Ui.UserProfileFragment"
+        android:name="com.example.goclass.ui.UserProfileFragment"
         android:label="fragment_user_profile"
         tools:layout="@layout/fragment_user_profile" >
         <action

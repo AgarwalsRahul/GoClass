@@ -1,4 +1,4 @@
-package com.example.goclass.Ui
+package com.example.goclass.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
