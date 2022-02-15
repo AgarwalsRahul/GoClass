@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "826203913890",
+    "project_id": "goclass-45b5d",
+    "storage_bucket": "goclass-45b5d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:826203913890:android:5a7a3c052f3c022a2aa1fb",
+        "android_client_info": {
+          "package_name": "com.example.goclass"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "826203913890-vdj2g3vqk2v1ibdiioo0ru3ur50ksr30.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_8DroNGa5HiJUxfy3XqOzXLF_rY4MKaI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "826203913890-vdj2g3vqk2v1ibdiioo0ru3ur50ksr30.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
