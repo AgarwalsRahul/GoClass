@@ -3,6 +3,7 @@ package com.example.goclass
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.goclass.databinding.ActivityMainBinding
 
@@ -15,7 +16,8 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         val bottomNavigationView = binding.bottomNavigationView
-        val navController = findNavController(R.id.navHostFragment)
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
+        val navController = navHostFragment.navController
         bottomNavigationView.setupWithNavController(navController)
         bottomNavigationView.itemIconTintList = null
     }
