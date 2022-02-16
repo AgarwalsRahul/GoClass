@@ -5,12 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
+import com.example.goclass.R
+import com.example.goclass.data.SavedPreference
 import com.example.goclass.databinding.FragmentGroupBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 class GroupFragment : Fragment() {
     private var _binding: FragmentGroupBinding? = null
@@ -20,6 +19,23 @@ class GroupFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentGroupBinding.inflate(inflater, container, false)
+
+        //If already in a class
+        if(SavedPreference.getUID(requireContext())!="")
+        {
+            findNavController().navigate(R.id.action_groupFragment_to_userClass)
+        }
+
+        //Create a class
+        binding.createClass.setOnClickListener {
+            findNavController().navigate(R.id.action_groupFragment_to_createAClassFragment)
+        }
+
+        //Join a class
+        binding.joinClass.setOnClickListener {
+            findNavController().navigate(R.id.action_groupFragment_to_joinClassFragment)
+        }
+
         return binding.root
     }
 

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/signIn">
+    app:startDestination="@id/userProfileFragment">
 
     <fragment
         android:id="@+id/groupFragment"
@@ -13,6 +13,15 @@
         <action
             android:id="@+id/action_groupFragment_to_userProfileFragment"
             app:destination="@id/userProfileFragment" />
+        <action
+            android:id="@+id/action_groupFragment_to_userClass"
+            app:destination="@id/userClass" />
+        <action
+            android:id="@+id/action_groupFragment_to_joinClassFragment"
+            app:destination="@id/joinClassFragment" />
+        <action
+            android:id="@+id/action_groupFragment_to_createAClassFragment"
+            app:destination="@id/createAClassFragment" />
     </fragment>
     <fragment
         android:id="@+id/signIn"
@@ -46,5 +55,40 @@
         <action
             android:id="@+id/action_userProfileFragment_to_groupFragment"
             app:destination="@id/groupFragment" />
+        <action
+            android:id="@+id/action_userProfileFragment_to_addBadgeFragment"
+            app:destination="@id/addBadgeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addBadgeFragment"
+        android:name="com.example.goclass.AddBadgeFragment"
+        android:label="fragment_add_badge"
+        tools:layout="@layout/fragment_add_badge" >
+        <action
+            android:id="@+id/action_addBadgeFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userClass"
+        android:name="com.example.goclass.UserClass"
+        android:label="fragment_user_class"
+        tools:layout="@layout/fragment_user_class" />
+    <fragment
+        android:id="@+id/createAClassFragment"
+        android:name="com.example.goclass.CreateAClassFragment"
+        android:label="fragment_create_a_class"
+        tools:layout="@layout/fragment_create_a_class" >
+        <action
+            android:id="@+id/action_createAClassFragment_to_userClass"
+            app:destination="@id/userClass" />
+    </fragment>
+    <fragment
+        android:id="@+id/joinClassFragment"
+        android:name="com.example.goclass.JoinClassFragment"
+        android:label="fragment_join_class"
+        tools:layout="@layout/fragment_join_class" >
+        <action
+            android:id="@+id/action_joinClassFragment_to_userClass"
+            app:destination="@id/userClass" />
     </fragment>
 </navigation>

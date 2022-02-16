@@ -2,6 +2,7 @@ package com.example.goclass
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
@@ -20,5 +21,15 @@ class MainActivity : AppCompatActivity() {
         val navController = navHostFragment.navController
         bottomNavigationView.setupWithNavController(navController)
         bottomNavigationView.itemIconTintList = null
+    }
+    fun toggle(visible :Boolean)
+    {
+        if(visible)
+        {
+        binding.bottomNavigationView.visibility= View.GONE
+        }
+        else{
+            binding.bottomNavigationView.visibility= View.VISIBLE
+        }
     }
 }
